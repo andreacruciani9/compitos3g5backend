@@ -1,6 +1,7 @@
 package it.epicode.compitoVenerdi.dao;
 
 import it.epicode.compitoVenerdi.entities.Catalogo;
+import it.epicode.compitoVenerdi.entities.Libri;
 import jakarta.persistence.*;
 
 import javax.xml.catalog.Catalog;
@@ -52,8 +53,12 @@ return a1;
 
     }
 
-    public List<Catalogo> getEtitolo(String titolo){
-        return em.createQuery("SELECT c FROM Catalogo c WHERE LOWER(c.titolo)LIKE LOWER(:titolo)",Catalogo.class).setParameter("titolo","%"+titolo+"%").getResultList();
+    public List<Catalogo> getEtitolo(String titolo) {
+        return em.createQuery("SELECT c FROM Catalogo c WHERE LOWER(c.titolo)LIKE LOWER(:titolo)", Catalogo.class).setParameter("titolo", "%" + titolo + "%").getResultList();
+    }
+        public Catalogo getIsbn(int codiceISBN){
+            return  em.createQuery("SELECT c FROM Catalogo c WHERE c.codiceISBN=:codiceISBN",Catalogo.class).setParameter("codiceISBN",codiceISBN).getSingleResult();
+
     }
 
 }

@@ -33,7 +33,7 @@ public class Catalogo {
         return codiceISBN;
     }
 
-    public void setCodiceISBN(int codiceISBN) {
+    public void setCodiceISBN(int codiceISBN ) {
         this.codiceISBN = codiceISBN;
     }
 

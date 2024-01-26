@@ -24,6 +24,6 @@ public class Usacatalogo {
         d.salva(r2);
         System.out.println(  d.getanno(2019));
         System.out.println(d.getautore("Chi"));
-
+        System.out.println(d.getIsbn(354));
     }
 }
