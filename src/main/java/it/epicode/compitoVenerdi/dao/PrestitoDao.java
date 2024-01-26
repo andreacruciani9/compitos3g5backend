@@ -34,6 +34,5 @@ public void deleteCatalogo(int id){
     em.remove(c);
     et.commit();
 
-}
+}}
 
-}
