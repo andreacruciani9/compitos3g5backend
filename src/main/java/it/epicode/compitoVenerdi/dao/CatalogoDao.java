@@ -52,5 +52,8 @@ return a1;
 
     }
 
+    public List<Catalogo> getEtitolo(String titolo){
+        return em.createQuery("SELECT c FROM Catalogo c WHERE LOWER(c.titolo)LIKE LOWER(:titolo)",Catalogo.class).setParameter("titolo","%"+titolo+"%").getResultList();
+    }
 
 }

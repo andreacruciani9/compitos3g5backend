@@ -23,6 +23,7 @@ public class Usacatalogo {
         Riviste r2=new Riviste("donnaModerna",2030,30,Periodicita.SETTIMANALE);
         d.salva(r2);
         System.out.println(  d.getanno(2019));
+        System.out.println(d.getautore("Chi"));
 
     }
 }
